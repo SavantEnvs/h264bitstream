@@ -1,0 +1,11 @@
+project: savantenvs/h264bitstream
+target: h264bitstream
+
+cmds:
+  - cmd: /mayhem/fuzz_h264
+    libfuzzer: true
+    env: {}
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/h264bitstream/testsuite
